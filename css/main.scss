@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: #333;
+}
+h2, h3, h4, h5 {
+	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-size: 2em;
+	font-weight: 700;
+}
+ul {
+	list-style-position: inside;
+}
+
+.hero {
+	background: url(../images/miami.jpg) no-repeat 0 0;
+	background-size: cover;
+	width: 100%;
+	height: 80vh;
+}
+.logo {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 0;
+	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
+	font-size: 5em;
+	font-weight: 800;
+	color: white;
+	text-align: center;
+	text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+	padding: 2em;
+}
