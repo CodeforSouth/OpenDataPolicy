@@ -1,10 +1,14 @@
 // Main File
 
+body
+  position: relative /* For scrollspy */
+
 .sidebar.affix
   position: static
+  overflow: hidden
 
-@media (min-width: 768px)
-  .sidebar
+.sidebar
+  @media (min-width: 768px)
     padding-left: 20px
 
 /* First level of nav
@@ -12,30 +16,37 @@
 .sidenav
   margin-top: 20px
   margin-bottom: 20px
+  overflow: hidden
+
 
 /* All levels of nav
 
+%sidebar-active
+  padding-left: 19px
+  color: #563d7c
+  text-decoration: none
+  background-color: transparent
+  border-left: 1px solid #563d7c
+
+
 .sidebar .nav
-  >
-  li > a
-    display: block
-    padding: 4px 20px
-    font-size: 13px
-    font-weight: 500
-    color: #999
-    &:hover, &:focus
-      padding-left: 19px
-      color: #563d7c
-      text-decoration: none
-      background-color: transparent
-      border-left: 1px solid #563d7c
-    .active
-      > a, &:hover > a, &:focus > a
-        padding-left: 18px
-        font-weight: bold
-        color: #563d7c
-        background-color: transparent
+  li
+    > a
+      display: block
+      padding: 4px 20px
+      font-size: 16px
+      font-weight: 500
+      color: #999
+      &:hover, &:focus
+        @extend %sidebar-active
+    &.active
+      > a
+        @extend %sidebar-active
         border-left: 2px solid #563d7c
+        &:active, &:hover, &:focus
+          @extend %sidebar-active
+          border-left: 2px solid #563d7c
+
   .nav
     display: none
     /* Hide by default, but at >768px, show it
@@ -45,7 +56,7 @@
       padding-top: 1px
       padding-bottom: 1px
       padding-left: 30px
-      font-size: 12px
+      font-size: 14px
       font-weight: normal
       &:hover, &:focus
         padding-left: 29px
@@ -75,9 +86,9 @@
   .back-to-top, .theme-toggle
     display: block
 
-/* Show and affix the side nav when space allows it
-@media (min-width: 992px)
-  .sidebar
+  // Show and affix the side nav when space allows it
+.sidebar
+  @media (min-width: 992px)
     .nav > .active > ul
       display: block
     &.affix, &.affix-bottom
@@ -87,7 +98,7 @@
       /* Undo the static from mobile first approach
       top: 20px
       bottom: 20px
-      overflow-y: auto
+
     &.affix-bottom
       position: absolute
       /* Undo the static from mobile first approach
@@ -97,10 +108,6 @@
     &.affix .sidenav
       margin-top: 0
       margin-bottom: 0
-/* Widen the fixed sidebar
-
-@media (min-width: 1200px)
-  /* Widen the fixed sidebar again
-  .sidebar
+  @media (min-width: 1200px)
     &.affix-bottom, &.affix
       width: 263px

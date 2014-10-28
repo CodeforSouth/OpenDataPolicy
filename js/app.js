@@ -5,32 +5,35 @@
     $window = $(window);
     $body = $(document.body);
     $body.scrollspy({
-      target: ".bs-docs-sidebar"
+      target: ".sidebar"
     });
     $window.on("load", function() {
-      $body.scrollspy("refresh");
+      return $body.scrollspy("refresh");
     });
-    $(".bs-docs-container [href=#]").click(function(e) {
-      e.preventDefault();
+    $(".sidenav [href=#]").click(function(e) {
+      return e.preventDefault();
     });
-    return setTimeout((function() {
+    setTimeout((function() {
       var $sideBar;
-      $sideBar = $(".bs-docs-sidebar");
-      $sideBar.affix({
+      $sideBar = $(".sidebar");
+      return $sideBar.affix({
         offset: {
           top: function() {
             var navOuterHeight, offsetTop, sideBarMargin;
             offsetTop = $sideBar.offset().top;
             sideBarMargin = parseInt($sideBar.children(0).css("margin-top"), 10);
-            navOuterHeight = $(".bs-docs-nav").height();
+            navOuterHeight = $(".nav").height();
             return this.top = offsetTop - navOuterHeight - sideBarMargin;
           },
           bottom: function() {
-            return this.bottom = $(".bs-docs-footer").outerHeight(true);
+            return this.bottom = $(".footer").outerHeight(true);
           }
         }
       });
     }), 100);
+    return $('.sidebar').on('activate.bs.scrollspy', function() {
+      return console.log('scroll spyed');
+    });
   });
 
 }).call(this);
