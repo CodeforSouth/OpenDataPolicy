@@ -65,6 +65,17 @@
             </ol>
           </section>
 
+          <section class="petition">
+            <h3>Would you like your Government to be more Open?</h3>
+            <div>
+                <a href="#" class="btn-affirm">Yes.</a>
+                <a href="#">Not yet.</a>
+            </div>
+            <form class="form-petition">
+                    <input type="text" placeholder="full name" class="input-name"><input type="text" placeholder="email address" class="input-email"><button type="submit">Sign</button>
+            </form>
+          </section>
+
           <section>
             <h2>How much will it cost?</h2>
             <p>"There has been a range of budgeted numbers attached to legislation for funding open data efforts. Generally, anywhere from $0 (if no one is hired and no additional money is needed for technology) to $500,000 (for hiring new staff and adopting new technology) may be budgeted for city, state, or federal open data initiatives. Funding should be considered for—but not limited to—the potential of new staff (administrative, technical and legal), new software (to house, extract and input data), training, and server maintenance. It will be important for each jurisdiction to consider what it needs to support a strong open data ecosystem."</p>
@@ -91,6 +102,39 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.js"></script>
+<!-- <script src="js/bootstrap.js"></script> -->
+<script>
+$(document).ready(function() {
+    $('body').on('click', '.btn-affirm', function(ev) {
+        ev.preventDefault();
+        $('.form-petition').fadeIn();
+    });
+
+    $('.form-petition').on('click', 'button', function() {
+    	var $name = $('.input-name').val();
+        var $email = $('.input-email').val();
+
+    	var data = {
+    		"entry.111166231": $name,
+    		"entry.945947808": $email
+    	};
+
+    	console.log(data);
+
+    	$.ajax({
+    		type: "POST",
+    		url: 'https://docs.google.com/a/nightshiftcreative.com/forms/d/1NXG3BTSi19_Qkc9rKcay1yqXqB1aGoi4UGPWtoYNEk4/formResponse',
+    		data: data,
+    		dataType: 'xml'
+    	})
+    	.done(function(data) {
+    		console.log('POST success.');
+    	})
+    	.fail(function(jqXHR, textStatus) {
+    		console.log('POST fail: ' + textStatus);
+    	});
+    });
+});
+</script>
 </body>
 </html>
