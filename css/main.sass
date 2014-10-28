@@ -71,22 +71,19 @@ body
 
 .back-to-top
   display: none
+  @media (min-width: 768px)
+    display: block
   padding: 4px 10px
   margin-top: 10px
   margin-left: 10px
   font-size: 12px
   font-weight: 500
   color: #999
+  &:hover
+    color: #563d7c
+    text-decoration: none
 
-.back-to-top:hover
-  color: #563d7c
-  text-decoration: none
-
-@media (min-width: 768px)
-  .back-to-top, .theme-toggle
-    display: block
-
-  // Show and affix the side nav when space allows it
+// Show and affix the side nav when space allows it
 .sidebar
   @media (min-width: 992px)
     .nav > .active > ul

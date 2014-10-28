@@ -59,14 +59,13 @@ body {
   font-size: 12px;
   font-weight: 500;
   color: #999999; }
+  @media (min-width: 768px) {
+    .back-to-top {
+      display: block; } }
+  .back-to-top:hover {
+    color: #563d7c;
+    text-decoration: none; }
 
-.back-to-top:hover {
-  color: #563d7c;
-  text-decoration: none; }
-
-@media (min-width: 768px) {
-  .back-to-top, .theme-toggle {
-    display: block; } }
 @media (min-width: 992px) {
   .sidebar .nav > .active > ul {
     display: block; }
