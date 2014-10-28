@@ -7,9 +7,10 @@
   <title>Miami Open Data Policy</title>
 
   <!-- Bootstrap -->
-  <!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+  <link href="css/bootstrap.css" rel="stylesheet">
   <!--Stylesheet-->
   <link href="css/main.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,93 +22,188 @@
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-    <header class="hero">
-        <h1 class="logo">Open Data Miami</h1>
-    </header>
-
-    <div class="container">
-        <h2>
-            <a href="http://www.codeforamerica.org/governments/capabilities/open-data/#intro">What is Open Data?</a>
-        </h2>
-          <section>
-            <p>Open data refers to data (such as documents, databases, records, or transcripts, including those managed by outside vendors) released by a government or organization that is:</p>
-            <ul>
-                <li><strong>freely available</strong> to be used, shared, and reused by anyone for any purpose, commercial or otherwise.</li>
-                <li><strong>available in digital, machine-readable formats</strong> (such as .csv) so that it can be used in combination with other data and applications.</li>
-                <li><strong>available in its entirety</strong> — and able to be downloaded “in bulk” and not just manually retrieved record-by-record.</li>
-            </ul>
-            <a href="http://us-city.census.okfn.org/">Suggested data to release</a>
-          </section>
-
-          <section>
-            <h2>Why does Miami-Dade need an Open Data Policy?</h2>
-            <ol>
-                <li>
-                  <h3>Transparency</h3>
-                  <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">1</a></sup></p>
-                </li>
-                <li>
-                  <h3>Economic benefits</h3>
-                  <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">3</a></sup></p>
-                </li>
-                <li>
-                  <h3>Efficiency</h3>
-                  <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">3</a></sup></p>
-                </li>
-                <li>
-                  <h3>Service improvements</h3>
-                  <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">2</a></sup></p>
-                </li>
-                <li>
-                  <h3>Innovation</h3>
-                  <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">2</a></sup></p>
-                </li>
-            </ol>
-          </section>
-
-          <section class="petition">
-            <h3>Would you like your Government to be more Open?</h3>
-            <div>
-                <a href="#" class="btn-affirm">Yes.</a>
-                <a href="#">Not yet.</a>
-            </div>
-            <form class="form-petition">
-                    <input type="text" placeholder="full name" class="input-name"><input type="text" placeholder="email address" class="input-email"><button type="submit">Sign</button>
-            </form>
-          </section>
-
-          <section>
-            <h2>How much will it cost?</h2>
-            <p>"There has been a range of budgeted numbers attached to legislation for funding open data efforts. Generally, anywhere from $0 (if no one is hired and no additional money is needed for technology) to $500,000 (for hiring new staff and adopting new technology) may be budgeted for city, state, or federal open data initiatives. Funding should be considered for—but not limited to—the potential of new staff (administrative, technical and legal), new software (to house, extract and input data), training, and server maintenance. It will be important for each jurisdiction to consider what it needs to support a strong open data ecosystem."</p>
-            <p><em>&#8212;From Sunlight Foundation<em></p>
-          </section>
-          <section>
-            <h2>What are other examples of open data policies?</h2>
-            <p>http://sunlightfoundation.com/policy/local/
-          </section>
-          <section="resources">
-            <h3>Additional Resources</h3>
-            <ul>
-              <li><a href="http://www.codeforamerica.org/governments/capabilities/open-data/">Code for America: Open Data Playbook</a></li>
-              <li><a href="http://sunlightfoundation.com/policy/local/">Sunlight Foundation: Local Open Data Policy site</a></li>
-              <li><a href="http://opendatahandbook.org/">Open Knowledge Foundation: Open Data Handbook</a></li>
-              <li><a href="http://www.socrata.com/open-data-field-guide/">Socrata Open Data Field Guide</a></li>
-            </ul>
-          </section>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">MiamiAPI</a>
     </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+  <div class="col-md-3">
+    <div class="sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+      <ul class="nav sidenav">
+        <li class="active">
+          <a href="#whatisopendata">What Is Open Data?</a>
+          <ul class="nav">
+            <li><a href="#sub-section">sub-section</a></li>
+            <li><a href="#sub-section">sub-section</a></li>
+            <li><a href="#sub-section">sub-section</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#whyopendata">Why An Open Data Policy?</a>
+          <ul class="nav">
+            <li><a href="#sub-section">sub-section</a></li>
+            <li><a href="#sub-section">sub-section</a></li>
+            <li><a href="#sub-section">sub-section</a></li>
+            <li><a href="#sub-section">sub-section</a></li>
+          </ul>
+        </li>
+        <li><a href="#section">Section</a></li>
+        <li>
+          <a href="#pagination">Section</a>
+          <ul class="nav">
+            <li><a href="#pagination-default">Sub-Section</a></li>
+            <li><a href="#pagination-pager">Sub-Section</a></li>
+          </ul>
+        </li>
+        <li><a href="#section">Section</a></li>
+        <li><a href="#section">Section</a></li>
+        <li><a href="#section">Section</a></li>
+        <li><a href="#section">Section</a></li>
+        <li><a href="#section">Section</a></li>
+        <li><a href="#section">Section</a></li>
+      </ul>
+      <a class="back-to-top" href="#top">
+        Back to top
+      </a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <h2 id="whatisopendata">
+      <a href="http://www.codeforamerica.org/governments/capabilities/open-data/#intro">What is Open Data?</a>
+    </h2>
+    <section>
+      <p>Open data refers to data (such as documents, databases, records, or transcripts, including those managed by outside vendors) released by a government or organization that is:</p>
+      <ul>
+        <li><strong>freely available</strong> to be used, shared, and reused by anyone for any purpose, commercial or otherwise.</li>
+        <li><strong>available in digital, machine-readable formats</strong> (such as json) so that it can be used in combination with other data and applications.</li>
+        <li><strong>available in its entirety</strong> — and able to be downloaded “in bulk” and not just manually retrieved record-by-record.</li>
+      </ul>
+      <a href="http://us-city.census.okfn.org/">Suggested data to release</a>
+    </section>
 
+    <section>
+      <h2 id="whyopendata">Why does Miami-Dade need an Open Data Policy?</h2>
+      <ol>
+        <li>
+          <h3>Transparency</h3>
+          <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">1</a></sup></p>
+        </li>
+        <li>
+          <h3>Economic benefits</h3>
+          <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">3</a></sup></p>
+        </li>
+        <li>
+          <h3>Efficiency</h3>
+          <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">3</a></sup></p>
+        </li>
+        <li>
+          <h3>Service improvements</h3>
+          <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">2</a></sup></p>
+        </li>
+        <li>
+          <h3>Innovation</h3>
+          <p>I now issue a new commandment: thou shalt do the dance. i did the same thing to gandhi, he didn't eat for three weeks. mister wayne, if you don't want to tell me exactly what you're doing, when i'm asked, i don't have to lie.<sup><a href="#">2</a></sup></p>
+        </li>
+      </ol>
+    </section>
 
+    <section class="petition">
+      <h3>Would you like your Government to be more Open?</h3>
+      <div>
+        <a href="#" class="petition-yes">Yes.</a>
+        <a href="#" class="petition-no">Not yet.</a>
+      </div>
+      <form class="form-petition">
+        <input type="text" placeholder="full name" class="input-name"><input type="text" placeholder="email address" class="input-email"><button type="submit">Sign</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>How much will it cost?</h2>
+      <p>"There has been a range of budgeted numbers attached to legislation for funding open data efforts. Generally, anywhere from $0 (if no one is hired and no additional money is needed for technology) to $500,000 (for hiring new staff and adopting new technology) may be budgeted for city, state, or federal open data initiatives. Funding should be considered for—but not limited to—the potential of new staff (administrative, technical and legal), new software (to house, extract and input data), training, and server maintenance. It will be important for each jurisdiction to consider what it needs to support a strong open data ecosystem."</p>
+      <p><em>&#8212;From Sunlight Foundation</em></p>
+    </section>
+
+    <section>
+      <h2>What are other examples of open data policies?</h2>
+      <p>http://sunlightfoundation.com/policy/local/
+    </section>
+
+    <section="resources">
+      <h3>Additional Resources</h3>
+      <ul>
+        <li><a href="http://www.codeforamerica.org/governments/capabilities/open-data/">Code for America: Open Data Playbook</a></li>
+        <li><a href="http://sunlightfoundation.com/policy/local/">Sunlight Foundation: Local Open Data Policy site</a></li>
+        <li><a href="http://opendatahandbook.org/">Open Knowledge Foundation: Open Data Handbook</a></li>
+        <li><a href="http://www.socrata.com/open-data-field-guide/">Socrata Open Data Field Guide</a></li>
+      </ul>
+    </section>
+  </div>
+
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<!-- <script src="js/bootstrap.js"></script> -->
 <script>
 $(document).ready(function() {
-    $('body').on('click', '.btn-affirm', function(ev) {
+    $('body').on('click', '.petition-yes', function(ev) {
         ev.preventDefault();
         $('.form-petition').fadeIn();
+    });
+
+    $('body').on('click', '.petition-no', function(ev) {
+        ev.preventDefault();
+        // scrolltoid
     });
 
     $('.form-petition').on('click', 'button', function() {
@@ -136,5 +232,8 @@ $(document).ready(function() {
     });
 });
 </script>
+<script src="js/bootstrap.js"></script>
+<script src="js/app.js"></script>
+
 </body>
 </html>

@@ -9,17 +9,25 @@
 body {
 	color: #333;
 }
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5,
+h1 a, h2 a, h3 a, h4 a, h5 a {
 	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
 	font-size: 2em;
 	font-weight: 700;
 }
+
 a {
 	color: #105779;
 	text-decoration: none;
 }
-ul {
+
+ul, ol {
 	list-style-position: inside;
+}
+li {
+	h3 {
+		color: #105779;
+	}
 }
 
 .hero {
@@ -28,18 +36,17 @@ ul {
 	width: 100%;
 	height: 80vh;
 }
-.logo {
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-	margin-top: 0;
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
-	font-size: 5em;
-	font-weight: 800;
-	color: white;
-	text-align: center;
-	text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-}
+// .hero-title {
+// 	position: relative;
+// 	top: 50%;
+// 	transform: translateY(-50%);
+// 	margin-top: 0;
+// 	font-size: 5em;
+// 	font-weight: 800;
+// 	color: white;
+// 	text-align: center;
+// 	text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+// }
 
 .container {
 	padding: 2em;
@@ -63,31 +70,9 @@ ul {
 		text-align: center;
 	}
 
-	.btn-affirm {
-		display: inline-block;
-		margin-bottom: 0.25em;
-		width: 100%;
-		padding: 0.25em 0.75em;
-		border: 3px solid #444;
-		background-color: white;
-		font: 2em "proxima-nova-sc-osf-condensed", sans-serif;
-		text-decoration: none;
-		text-transform: uppercase;
-		color: #105779;
-
-		&:hover {
-			background-color: #105779;
-			color: white;
-		}
-	}
-
 	a:last-of-type {
 		display: block;
 		font-size: .875em;
-	}
-
-	.form-petition {
-		display: none;
 	}
 
 	input {
@@ -112,15 +97,29 @@ ul {
 		vertical-align: top;
 	}
 }
+.form-petition {
+	display: none;
+}
+.petition-yes {
+	display: inline-block;
+	margin-bottom: 0.25em;
+	width: 100%;
+	padding: 0.25em 0.75em;
+	border: 3px solid #444;
+	background-color: white;
+	font: 2em "proxima-nova-sc-osf-condensed", sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #105779;
+
+	&:hover {
+		background-color: #105779;
+		color: white;
+	}
+}
 
 @media screen and (min-width: 768px) {
 	.petition {
-		width: 70%;
-
-		.btn-affirm {
-			width: 40%;
-		}
-
 		input {
 			width: 40%;
 
@@ -133,5 +132,8 @@ ul {
 		button {
 			width: 20%;
 		}
+	}
+	.petition-yes {
+		width: 40%;
 	}
 }
