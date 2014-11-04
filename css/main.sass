@@ -1,0 +1,69 @@
+$cfa-blue: #399fd3
+$cfa-pink: #cf1b41
+
+@import "bootstrap"
+@import "sidebar"
+@import "style"
+
+body
+  position: relative /* For scrollspy */
+  font-size: 16px
+
+.cover
+  background: url(../images/miami.jpg) no-repeat center center $cfa-pink
+  background-size: cover
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2)
+  height: 80vh
+  margin-top: -20px
+  text-align: center
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -0.25em
+
+.cover-content
+  display: inline-block
+  vertical-align: middle
+  h1
+    color: white
+    font-size: 5em
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8)
+  .lead
+    color: white
+
+//buttons
+
+.btn-odp-blue
+  @include button-variant(white, transparentize($cfa-blue, 0.75), $cfa-blue)
+  //@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
+  color: white
+  border: 0.35rem solid $cfa-blue
+  &:hover, &:focus, &:active
+    color: white
+    background: $cfa-blue
+    border: 0.35rem solid $cfa-blue
+.btn-odp-pink
+  @include button-variant(white, transparentize($cfa-pink, 0.75), $cfa-pink)
+  //@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
+  border: 0.35rem solid $cfa-pink
+  &:hover, &:focus, &:active
+    color: white
+    background: $cfa-pink
+    border: 0.35rem solid $cfa-pink
+
+.btn-xl
+  $padding-x-large-vertical: 16px
+  $padding-x-large-horizontal: 24px
+  $font-size-x-large: 1.25em
+  $line-height-large: 1.33
+  $border-radius-x-large: 8px
+  @include button-size($padding-x-large-vertical, $padding-x-large-horizontal, $font-size-x-large, $line-height-large, $border-radius-x-large)
+
+// Utilities
+
+.pink
+  color: $cfa-pink !important
+.blue
+  color: $cfa-blue !important
