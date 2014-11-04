@@ -76,13 +76,30 @@ body
 
 
 .btn-odp-blue
-  @extend .btn-default
-  background: none
+  @include button-variant(white, transparentize($cfa-blue, 0.75), $cfa-blue)
+  //@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
+  color: white
+  border: 0.35rem solid $cfa-blue
+  &:hover, &:focus, &:active
+    color: white
+    background: $cfa-blue
+    border: 0.35rem solid $cfa-blue
+.btn-odp-pink
+  @include button-variant(white, transparentize($cfa-pink, 0.75), $cfa-pink)
+  //@include button-variant($btn-default-color, $btn-default-bg, $btn-default-border)
+  border: 0.35rem solid $cfa-pink
+  &:hover, &:focus, &:active
+    color: white
+    background: $cfa-pink
+    border: 0.35rem solid $cfa-pink
 
 .btn-xl
-  @include button-size(2em, 2.25em, $font-size-large, $line-height-large, $border-radius-large)
-
-
+  $padding-x-large-vertical: 16px
+  $padding-x-large-horizontal: 24px
+  $font-size-x-large: 1.25em
+  $line-height-large: 1.33
+  $border-radius-x-large: 8px
+  @include button-size($padding-x-large-vertical, $padding-x-large-horizontal, $font-size-x-large, $line-height-large, $border-radius-x-large)
 
 // Utilities
 
