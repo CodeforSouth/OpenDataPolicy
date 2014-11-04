@@ -19,33 +19,11 @@
   <script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-<nav class="navbar navbar-odp" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-odp-brand" href="#"><span style="color: deepskyblue"><span style="font-size:1.5em">M</span>iami </span><span style="color: #cf1b41"><span style="font-size:1.5em">O</span>pen Data</span></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Learn More</a></li>
-        <li><a href="#petition">Sign Petition</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
 <div class="cover">
   <div class="cover-content">
-    <h1>Test</h1>
-    <a class="btn btn-success" href="#whatisopendata">Learn More</a>
-    <a class="btn btn-success" href="#whatisopendata">Learn More</a>
+    <h1>Miami<span class="brand-second">OpenData</span></h1>
+    <a class="btn btn-primary btn-lg" href="#whatisopendata">Tell Me More</a>
+    <a class="btn btn-primary btn-lg" href="#petition">I Support Open Data</a>
   </div>
 </div>
 <div class="container">
@@ -106,6 +84,40 @@
     <section>
       <p>Information about our county and cities are among our governments' greatest public assets. While Miami-Dade County and many municipalities <a href="http://us-city.census.okfn.org/">have significant data available,</a> we lag behind many other counties and cities of our size in overall availabilty of data and frequency at which those data are updated. We also lack a centralized data repository for easy access to our data. Adopting a formal open data policy is the first step toward making local government information accessible and easy-to-use and the only way we might consistently leverage the benefits of a true open data ecosystem.</p>
     </section>
+
+    <section id="petition" class="petition">
+      <h3>Convinced to support open data in Miami?</h3>
+      <div>
+        <a href="#" class="petition-yes">Yes.</a>
+        <a href="#benefits" class="petition-no">Not yet.</a>
+      </div>
+      <!-- Begin MailChimp Signup Form -->
+      <form
+          class="form-petition"
+          action="//codeformiami.us3.list-manage.com/subscribe/post?u=246ae18879d8d50abf4bf01ba&amp;id=ec4a643e74"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+          class="validate"
+          target="_blank"
+          novalidate>
+          <input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="First Name">
+          <input type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
+        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
+        <input type="text" value="" name="MMERGE3" class="" id="mce-MMERGE3" placeholder="Zip Code">
+        <div id="mce-responses" style="display:none">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+          <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <input type="text" name="b_246ae18879d8d50abf4bf01ba_ec4a643e74" tabindex="-1" value="" style="display:none">
+          <button type="submit" name="subscribe" id="mc-embedded-subscribe">Sign Up</button>
+      </form>
+      <div>
+          <p>We will send you updates about the Open Data Policy in Miami.</p>
+          <small><a href="#privacy">We care about your privacy.</a></small>
+      </div>
+      <!--End mc_embed_signup-->
+    </section>
+
     <h1 id="benefits">Benefits of Open Data</h1>
     <section>
       <h3>Transparency &amp; Accountability</h3>
@@ -156,18 +168,8 @@
         <li><a href="http://opendatahandbook.org/">Open Knowledge Foundation: Open Data Handbook</a></li>
         <li><a href="https://usodi.org/">U.S. Open Data Institute</a>
         <li><a href="http://www.socrata.com/open-data-field-guide/">Socrata Open Data Field Guide</a></li>
-        
+
       </ul>
-    </section>
-    <section id="petition" class="petition">
-      <h3>Do you support open data in Miami?</h3>
-      <div>
-        <a href="#" class="petition-yes">Yes.</a>
-        <a href="#" class="petition-no">Not yet.</a>
-      </div>
-      <form class="form-petition">
-        <input type="text" placeholder="full name" class="input-name"><input type="text" placeholder="email address" class="input-email"><button type="submit">Sign</button>
-      </form>
     </section>
     <!--<section="supporters">
       <h3>Supporters</h3>
@@ -190,36 +192,6 @@ $(document).ready(function() {
     $('body').on('click', '.petition-yes', function(ev) {
         ev.preventDefault();
         $('.form-petition').fadeIn();
-    });
-
-    $('body').on('click', '.petition-no', function(ev) {
-        ev.preventDefault();
-        // scrolltoid
-    });
-
-    $('.form-petition').on('click', 'button', function() {
-    	var $name = $('.input-name').val();
-        var $email = $('.input-email').val();
-
-    	var data = {
-    		"entry.111166231": $name,
-    		"entry.945947808": $email
-    	};
-
-    	console.log(data);
-
-    	$.ajax({
-    		type: "POST",
-    		url: 'https://docs.google.com/a/nightshiftcreative.com/forms/d/1NXG3BTSi19_Qkc9rKcay1yqXqB1aGoi4UGPWtoYNEk4/formResponse',
-    		data: data,
-    		dataType: 'xml'
-    	})
-    	.done(function(data) {
-    		console.log('POST success.');
-    	})
-    	.fail(function(jqXHR, textStatus) {
-    		console.log('POST fail: ' + textStatus);
-    	});
     });
 });
 </script>
