@@ -48,6 +48,7 @@ li {
 }
 
 .brand-second {
+	display: block;
 	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
 	color: $cfa-pink;
 }
@@ -124,6 +125,9 @@ li {
 }
 
 @media screen and (min-width: 768px) {
+	.brand-second {
+		display: inline-block;
+	}
 	.petition {
 		input {
 			float: left;
