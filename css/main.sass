@@ -9,8 +9,19 @@ body
   font-size: 16px
 
 .cover
-  background: $cfa-pink no-repeat center center
+  background: $cfa-blue no-repeat center center
+  background: #cf1b41 /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #cf1b41 0%, #399fd3 100%) /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#cf1b41), color-stop(100%,#399fd3)) /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg,  #cf1b41 0%,#399fd3 100%) /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg,  #cf1b41 0%,#399fd3 100%) /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg,  #cf1b41 0%,#399fd3 100%) /* IE10+ */
+  background: linear-gradient(135deg,  #cf1b41 0%,#399fd3 100%) /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf1b41', endColorstr='#399fd3',GradientType=1 ) /* IE6-9 fallback on horizontal gradient */
   background-size: cover
+
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2)
+
   height: 80vh
   margin-top: -20px
   text-align: center
@@ -23,7 +34,17 @@ body
   .cover-content
     display: inline-block
     vertical-align: middle
-    width: 300px
+    width: 30em
+    .miami
+      display: inline-block
+      color: $cfa-blue
+      &::first-letter
+        font-size: 2em
+    .opendata
+      display: inline-block
+      color: $cfa-pink
+      &::first-letter
+        font-size: 2em
 
 // Nav bar
 
@@ -38,6 +59,9 @@ body
   box-sizing: content-box
   padding-top: 2em
   height: none
+
+
+
 .navbar-odp
   @extend .navbar-default
   background: #ffffff
@@ -162,3 +186,11 @@ body
   @media (min-width: 1200px)
     &.affix-bottom, &.affix
       width: 263px
+
+
+// Utilities
+
+.pink
+  color: $cfa-pink
+.blue
+  color: $cfa-blue
