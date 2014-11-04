@@ -35,6 +35,10 @@ li {
 	}
 }
 
+iframe {
+	max-width: 100%;
+}
+
 .btn,
 .btn-lg {
 	margin-bottom: 0.5em;
@@ -55,9 +59,13 @@ li {
 }
 
 .container {
-	padding: 2em;
+	padding: 1em;
 }
 
+// Over qualified, I know, I feel like a terrible human being right now.
+#whatisopendata {
+	margin-top: 20px;
+}
 
 .petition {
 	margin: 1em auto;
