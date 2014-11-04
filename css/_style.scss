@@ -11,8 +11,9 @@ body {
 }
 h1, h2, h3, h4, h5,
 h1 a, h2 a, h3 a, h4 a, h5 a {
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
-//	font-size: 2em;
+	font-family: "proxima-nova-sc-osf-condensed", Helvetica, Arial, sans-serif;
+    color: $cfa-pink;
+    //font-size: 2em;
 	font-weight: 700;
 }
 
@@ -21,7 +22,7 @@ h4 {
 }
 
 a {
-	color: $cfa-pink;
+	color: $cfa-blue;
 	text-decoration: none;
 }
 
@@ -48,7 +49,7 @@ li {
 
 .brand-second {
 	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
-	color: #cf1b41;
+	color: $cfa-pink;
 }
 
 .container {
@@ -82,7 +83,7 @@ li {
 	input {
 		width: 100%;
 		padding: 0.5em;
-		border: 1px solid #105779;
+		border: 1px solid $cfa-blue;
 		font: 1.25em/1.5em serif;
 
 		&:first-of-type {
@@ -93,8 +94,8 @@ li {
 	button {
 		width: 100%;
 		padding: 0.25em;
-		border: 1px solid #105779;
-		background-color: #105779;
+		border: 1px solid $cfa-blue;
+		background-color: $cfa-blue;
 		font: 1.25em/2em "proxima-nova-sc-osf-condensed", sans-serif;
 		color: white;
 		text-align: center;
@@ -109,15 +110,15 @@ li {
 	margin-bottom: 0.25em;
 	width: 100%;
 	padding: 0.25em 0.75em;
-	border: 3px solid #444;
+	border: 3px solid $cfa-blue;
 	background-color: white;
 	font: 2em "proxima-nova-sc-osf-condensed", sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #105779;
+	color: $cfa-blue;
 
 	&:hover {
-		background-color: #105779;
+		background-color: $cfa-blue;
 		color: white;
 	}
 }
@@ -129,7 +130,7 @@ li {
 			width: 50%;
 
 			&:nth-of-type(odd) {
-				border-bottom: 1px solid #105779;
+				border-bottom: 1px solid $cfa-blue;
 				border-right: 0;
 			}
 
