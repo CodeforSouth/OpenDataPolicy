@@ -12,12 +12,12 @@ body {
 h1, h2, h3, h4, h5,
 h1 a, h2 a, h3 a, h4 a, h5 a {
 	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
-	font-size: 2em;
+//	font-size: 2em;
 	font-weight: 700;
 }
 
 a {
-	color: #105779;
+	color: $cfa-pink;
 	text-decoration: none;
 }
 
@@ -26,7 +26,7 @@ ul, ol {
 }
 li {
 	h3 {
-		color: #105779;
+		color: $cfa-pink;
 	}
 }
 

@@ -1,8 +1,62 @@
-// Main File
+$cfa-blue: #399fd3
+$cfa-pink: #cf1b41
+
+@import "bootstrap"
+@import "style"
 
 body
   position: relative /* For scrollspy */
+  font-size: 16px
 
+.cover
+  background: $cfa-pink no-repeat center center
+  background-size: cover
+  height: 80vh
+  margin-top: -20px
+  text-align: center
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    margin-right: -0.25em
+  .cover-content
+    display: inline-block
+    vertical-align: middle
+    width: 300px
+
+// Nav bar
+
+.navbar
+  min-height: 4em
+.navbar-odp-brand
+  @extend .navbar-brand
+  font-size: 1.2em
+  font-style: normal
+  font-weight: 700
+  text-transform: uppercase
+  box-sizing: content-box
+  padding-top: 2em
+  height: none
+.navbar-odp
+  @extend .navbar-default
+  background: #ffffff
+  border: none
+  .navbar-nav
+    li
+      a
+        font-size: 1.2em
+        font-style: normal
+        font-weight: 700
+        margin: 0
+        text-transform: uppercase
+        box-sizing: content-box
+        padding-top: 2em
+        padding-bottom: 2em
+
+
+
+// Sidebar Stuff
 .sidebar.affix
   position: static
   overflow: hidden
@@ -23,10 +77,11 @@ body
 
 %sidebar-active
   padding-left: 19px
-  color: #563d7c
+  color: $cfa-pink
+  font-weight: bold
   text-decoration: none
   background-color: transparent
-  border-left: 1px solid #563d7c
+  border-left: 1px solid $cfa-pink
 
 
 .sidebar .nav
@@ -35,17 +90,17 @@ body
       display: block
       padding: 4px 20px
       font-size: 16px
-      font-weight: 500
-      color: #999
+      font-weight: bold
+      color: $cfa-blue
       &:hover, &:focus
         @extend %sidebar-active
     &.active
       > a
         @extend %sidebar-active
-        border-left: 2px solid #563d7c
+        border-left: 2px solid $cfa-pink
         &:active, &:hover, &:focus
           @extend %sidebar-active
-          border-left: 2px solid #563d7c
+          border-left: 2px solid $cfa-pink
 
   .nav
     display: none
@@ -56,8 +111,8 @@ body
       padding-top: 1px
       padding-bottom: 1px
       padding-left: 30px
-      font-size: 14px
-      font-weight: normal
+      font-size: 16px
+      font-weight: Normal
       &:hover, &:focus
         padding-left: 29px
       .active
@@ -95,7 +150,6 @@ body
       /* Undo the static from mobile first approach
       top: 20px
       bottom: 20px
-
     &.affix-bottom
       position: absolute
       /* Undo the static from mobile first approach
