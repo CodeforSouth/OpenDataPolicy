@@ -5519,7 +5519,8 @@ body {
   text-transform: uppercase;
   box-sizing: content-box;
   padding-top: 2em;
-  height: none; }
+  margin-left: 0px !important;
+  height: 0; }
 
 .navbar-odp {
   background: white;
