@@ -5497,7 +5497,7 @@ body {
   .cover .cover-content {
     display: inline-block;
     vertical-align: middle;
-    width: 30em; }
+    width: 24em; }
     .cover .cover-content .miami {
       display: inline-block;
       color: #399fd3; }
@@ -5508,6 +5508,8 @@ body {
       color: #cf1b41; }
       .cover .cover-content .opendata::first-letter {
         font-size: 2em; }
+    .cover .cover-content .lead {
+      color: white; }
 
 .navbar {
   min-height: 4em; }
