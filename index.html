@@ -175,7 +175,7 @@
   </div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script>
 $(document).ready(function() {
@@ -183,6 +183,31 @@ $(document).ready(function() {
         ev.preventDefault();
         $('.form-petition').fadeIn();
     });
+
+    // Sidenav affixing
+    setTimeout(function () {
+      var $sideBar = $('.sidebar');
+      var offset={};
+      $sideBar.affix({
+        offset: {
+          top: function () {
+            var offsetTop      = $sideBar.offset().top + 200;
+            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10);
+            var navOuterHeight = $('.nav').height();
+
+            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+          },
+          bottom: function () {
+            return (this.bottom = $('footer').outerHeight(true))
+          }
+        }
+      });
+    }, 100);
+
+    setTimeout(function () {
+      $('.top').affix()
+    }, 100)
+
 });
 </script>
 <script src="js/bootstrap.js"></script>
