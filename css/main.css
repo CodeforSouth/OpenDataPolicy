@@ -5522,6 +5522,14 @@ body {
   .cover-content .lead {
     color: white; }
 
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+  color: #777777;
+  text-align: center;
+  border-top: 1px solid #e5e5e5; }
+
 .btn-xl {
   padding: 16px 24px;
   font-size: 1.25em;
