@@ -13,24 +13,6 @@
     $(".sidenav [href=#]").click(function(e) {
       return e.preventDefault();
     });
-    setTimeout((function() {
-      var $sideBar;
-      $sideBar = $(".sidebar");
-      return $sideBar.affix({
-        offset: {
-          top: function() {
-            var navOuterHeight, offsetTop, sideBarMargin;
-            offsetTop = $sideBar.offset().top;
-            sideBarMargin = parseInt($sideBar.children(0).css("margin-top"), 10);
-            navOuterHeight = $(".nav").height();
-            return this.top = offsetTop - navOuterHeight - sideBarMargin;
-          },
-          bottom: function() {
-            return this.bottom = $(".footer").outerHeight(true);
-          }
-        }
-      });
-    }), 100);
     return $('.sidebar').on('activate.bs.scrollspy', function() {
       return console.log('scroll spyed');
     });
