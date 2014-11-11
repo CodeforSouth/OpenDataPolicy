@@ -13,8 +13,21 @@
     $(".sidenav [href=#]").click(function(e) {
       return e.preventDefault();
     });
-    return $('.sidebar').on('activate.bs.scrollspy', function() {
+    $('.sidebar').on('activate.bs.scrollspy', function() {
       return console.log('scroll spyed');
+    });
+    return $("a[href*=#]:not([href=#])").click(function() {
+      var target;
+      if (location.pathname.replace(/^\//, "") === this.pathname.replace(/^\//, "") || location.hostname === this.hostname) {
+        target = $(this.hash);
+        target = (target.length ? target : $("[name=" + this.hash.slice(1) + "]"));
+        if (target.length) {
+          $("html,body").animate({
+            scrollTop: target.offset().top
+          }, 800);
+          return false;
+        }
+      }
     });
   });
 
