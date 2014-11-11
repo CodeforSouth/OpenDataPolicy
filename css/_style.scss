@@ -112,9 +112,6 @@ iframe {
 		vertical-align: top;
 	}
 }
-.form-petition {
-	display: none;
-}
 .petition-yes {
 	display: inline-block;
 	margin-bottom: 0.25em;
@@ -142,15 +139,15 @@ iframe {
 			float: left;
 			width: 50%;
 
-			&:nth-of-type(odd) {
-				border-bottom: 1px solid $cfa-blue;
+			&:nth-child(even) {
 				border-right: 0;
 			}
 
-			&:nth-of-type(1),
-			&:nth-of-type(2) {
+			&:nth-of-type(1n),
+			&:nth-of-type(2n) {
 				border-bottom: 0;
 			}
+
 		}
 
 		button {

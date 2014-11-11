@@ -24,7 +24,7 @@
     <h1>Miami<span class="brand-second">OpenData</span></h1>
     <p class="lead">Taking steps towards the future one dataset at a time.</p>
     <a class="btn btn-primary btn-lg" href="#whatisopendata">Tell Me More</a>
-    <a class="btn btn-primary btn-lg" href="#petition">I Support Open Data</a>
+    <a class="btn btn-primary btn-lg" href="#petition-form">I Support Open Data</a>
 
   </div>
 </div>
@@ -73,26 +73,9 @@
     <section id="petition" class="petition">
       <h3>Convinced to support open data in Miami?</h3>
       <div>
-        <a href="#" class="petition-yes">Yes.</a>
+        <a href="#petition-form" class="petition-yes">Yes.</a>
         <a href="#benefits" class="petition-no">Not yet.</a>
       </div>
-      <!-- Begin MailChimp Signup Form -->
-
-      <form
-        class="form-petition" accept-charset="UTF-8" action="https://formkeep.com/f/9a5e8d0c6401" method="POST">
-  <input type="hidden" name="utf8" value="✓">
-        <input type="text" name="firstname" required placeholder="First Name">
-        <input type="text" name="lastname" required placeholder="Last Name">
-        <input type="email" name="email" required placeholder="Email">
-        <input type="number" name="zipcode" required placeholder="Zip Code">
-        <button type="submit">Sign Up</button>
-      </form>
-      <div>
-        <hr>
-        <!-- <p>We will send you updates about the Open Data Policy in Miami.</p> -->
-        <small><em>We care about your privacy, we won't share your information.</em></small>
-      </div>
-      <!--End mc_embed_signup-->
     </section>
 
     <h1 id="benefits" class="page-header">Benefits of Open Data</h1>
@@ -146,15 +129,24 @@
         <li><a href="http://www.socrata.com/open-data-field-guide/">Socrata Open Data Field Guide</a></li>
       </ul>
     </section>
-    <!--<section="supporters">
-      <h3>Supporters</h3>
-      <ul>
-        <li><a href="http://www.codeforamerica.org/governments/capabilities/open-data/">Code for America: Open Data Playbook</a></li>
-        <li><a href="http://sunlightfoundation.com/policy/local/">Sunlight Foundation: Local Open Data Policy guide</a></li>
-        <li><a href="http://opendatahandbook.org/">Open Knowledge Foundation: Open Data Handbook</a></li>
-        <li><a href="http://www.socrata.com/open-data-field-guide/">Socrata Open Data Field Guide</a></li>
-      </ul>
-    </section>-->
+
+    <section id="petition-form" class="petition">
+      <h3>Sign on as a supporter</h3>
+      <form
+        class="form-petition" accept-charset="UTF-8" action="https://formkeep.com/f/9a5e8d0c6401" method="POST">
+  <input type="hidden" name="utf8" value="✓">
+        <input type="text" name="firstname" required placeholder="First Name">
+        <input type="text" name="lastname" required placeholder="Last Name">
+        <input type="email" name="email" required placeholder="Email">
+        <input type="number" name="zipcode" required placeholder="Zip Code">
+        <button type="submit">Sign Up</button>
+      </form>
+      <div>
+        <hr>
+        <!-- <p>We will send you updates about the Open Data Policy in Miami.</p> -->
+        <small><em>We care about your privacy, we won't share your information.</em></small>
+      </div>
+    </section>
   </div>
 
 
@@ -170,10 +162,6 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script>
 $(document).ready(function() {
-    $('body').on('click', '.petition-yes', function(ev) {
-        ev.preventDefault();
-        $('.form-petition').fadeIn();
-    });
 
     // Sidenav affixing
     setTimeout(function () {
