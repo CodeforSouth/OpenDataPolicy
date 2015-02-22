@@ -130,6 +130,14 @@ iframe {
 	}
 }
 
+.lang {
+	position: absolute;
+	right: 0;
+	display: block;
+	margin: 0.5em 1em;
+	font-size: 85%;
+}
+
 @media screen and (min-width: 768px) {
 	.brand-second {
 		display: inline-block;
