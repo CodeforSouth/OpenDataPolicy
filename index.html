@@ -162,32 +162,49 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script>
-$(document).ready(function() {
+$(function() {
 
-    // Sidenav affixing
-    setTimeout(function () {
-      var $sideBar = $('.sidebar');
-      var offset={};
-      $sideBar.affix({
-        offset: {
-          top: function () {
-            var offsetTop      = $sideBar.offset().top + 200;
-            var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10);
-            var navOuterHeight = $('.nav').height();
+  // Sidenav affixing
+  setTimeout(function () {
+    var $sideBar = $('.sidebar');
+    var offset={};
+    $sideBar.affix({
+      offset: {
+        top: function () {
+          var offsetTop      = $sideBar.offset().top + 200;
+          var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10);
+          var navOuterHeight = $('.nav').height();
 
-            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-          },
-          bottom: function () {
-            return (this.bottom = $('footer').outerHeight(true))
-          }
+          return (this.top = offsetTop - navOuterHeight - sideBarMargin)
+        },
+        bottom: function () {
+          return (this.bottom = $('footer').outerHeight(true))
         }
-      });
-    }, 100);
+      }
+    });
+  }, 100);
 
-    setTimeout(function () {
-      $('.top').affix()
-    }, 100)
+  setTimeout(function () {
+    $('.top').affix()
+  }, 100);
 
+  $('.form-petition').submit(function(event) {
+    event.preventDefault();
+
+    var petitionForm = $(this);
+
+    $.ajax({
+      type: 'POST',
+      url: petitionForm.prop('action'),
+      accept: {
+        javascript: 'application/javascript'
+      },
+      data: petitionForm.serialize()
+    })
+    .done(function(data) {
+      $('#petition-form').html('<h3 style="margin-bottom: 0;">Thank you for supporting Open Data!</h3>');
+    });
+  });
 });
 </script>
 <script src="js/bootstrap.js"></script>
