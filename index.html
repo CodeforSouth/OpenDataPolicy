@@ -154,9 +154,23 @@
       </form>
       <div>
         <hr>
-        <!-- <p>We will send you updates about the Open Data Policy in Miami.</p> -->
-        <small><em>We care about your privacy, we won't share your information.</em></small>
+        <small><em>We care about your privacy, we won't share your email.</em></small>
       </div>
+    </section>
+    <section id="petition-confirmation" class="petition text-center">
+      <h3>Thank you for supporting Open Data in Miami,<br>please let others know.</h3>
+      <!-- share social -->
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://miamiopendata.org#petition-form" data-text="#OpenData can power eGov innovation. @miamidadecounty needs a policy." data-count="none" data-via="CodeForMiami">Tweet</a>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <div class="fb-share-button" data-href="http://miamiopendata.org#petition-form" data-layout="button"></div>
     </section>
   </div>
 
@@ -168,9 +182,7 @@
     </div>
   </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
 <script>
 $(function() {
 
@@ -198,7 +210,8 @@ $(function() {
     $('.top').affix()
   }, 100);
 
-  $('.form-petition').submit(function(event) {
+  // submit petition form, show thanks and social
+  $('.form-petition').submit(function() {
     event.preventDefault();
 
     var petitionForm = $(this);
@@ -212,7 +225,8 @@ $(function() {
       data: petitionForm.serialize()
     })
     .done(function(data) {
-      $('#petition-form').html('<h3 style="margin-bottom: 0;">Thank you for supporting Open Data!</h3>');
+      $('#petition-form').hide();
+      $('#petition-confirmation').show();
     });
   });
 });
