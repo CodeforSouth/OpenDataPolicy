@@ -1,5 +1,7 @@
 @import "bootstrap/mixins";
 
+$font-sans-serif: "proxima-nova-alt-condensed", "Helvetica Neue", Helvetica, sans-serif;
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -11,10 +13,10 @@ body {
 }
 h1, h2, h3, h4, h5,
 h1 a, h2 a, h3 a, h4 a, h5 a {
-	font-family: "proxima-nova-sc-osf-condensed", Helvetica, Arial, sans-serif;
+	font-family: $font-sans-serif;
     color: $cfa-pink;
     //font-size: 2em;
-	font-weight: 700;
+	font-weight: 400;
 }
 
 h4 {
@@ -51,10 +53,13 @@ iframe {
 		border: 3px solid white;
 	}
 }
-
+.cover-content {
+	h1, h1 .brand-second {
+		font-family: "proxima-nova-sc-osf-condensed", "Helvetica Neue", Helvetica, sans-serif;
+	}
+}
 .brand-second {
 	display: block;
-	font-family: "proxima-nova-sc-osf-condensed", sans-serif;
 	color: $cfa-pink;
 }
 
@@ -62,6 +67,9 @@ iframe {
 	padding: 1em;
 }
 
+h2 + section {
+	margin-left: 40px;
+}
 .page-header {
 	border-bottom: none;
 
@@ -71,13 +79,16 @@ iframe {
 		color: #ddd;
 	}
 }
+.page-subheader {
+	font-size: 24px;
+}
 // Over qualified, I know, I feel like a terrible human being right now.
 #whatisopendata {
 	margin-top: 20px;
 }
 
 .petition {
-	margin: 1em auto;
+	margin: 4rem auto 1rem;
 	padding: 2em;
 	border: 1px solid #ddd;
 	background-color: #eee;
@@ -115,7 +126,7 @@ iframe {
 		padding: 0.25em;
 		border: 1px solid $cfa-blue;
 		background-color: $cfa-blue;
-		font: 1.25em/2em "proxima-nova-sc-osf-condensed", sans-serif;
+		font: 1.25em/2em $font-sans-serif;
 		color: white;
 		text-align: center;
 		vertical-align: top;
@@ -128,7 +139,7 @@ iframe {
 	padding: 0.25em 0.75em;
 	border: 3px solid $cfa-blue;
 	background-color: white;
-	font: 2em "proxima-nova-sc-osf-condensed", sans-serif;
+	font: 2em $font-sans-serif;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: $cfa-blue;
