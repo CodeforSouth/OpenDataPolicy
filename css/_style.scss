@@ -62,6 +62,15 @@ iframe {
 	padding: 1em;
 }
 
+.page-header {
+	border-bottom: none;
+
+	.glyphicon {
+		margin-right: 16px;
+		font-size: 24px;
+		color: #ddd;
+	}
+}
 // Over qualified, I know, I feel like a terrible human being right now.
 #whatisopendata {
 	margin-top: 20px;
