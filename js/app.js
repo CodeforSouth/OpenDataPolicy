@@ -34,3 +34,15 @@
 }).call(this);
 
 //# sourceMappingURL=app.map
+$.ajax({
+  url: 'http://petitionapi.heroku.com/api',
+  
+  success: function(data) {
+      $.each(data, function(i, obj) {
+       var line = "<li><img style="height:25px;width:25px" src='"+ obj.avatar + "' /> " + obj.firstname + " " + obj.lastname + " " + obj.zipcode +"</li>"
+       $('#signupList').append(line)
+
+   });
+  },
+  dataType: 'json'
+});
