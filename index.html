@@ -157,6 +157,11 @@
         <small><em>We care about your privacy, we won't share your email.</em></small>
       </div>
     </section>
+<section>
+      <h3>Thank You to those that have supported us</h3>
+        <ul id="signupList"> 
+        </ul>
+    </section> 
     <section id="petition-confirmation" class="petition text-center">
       <h3>Thank you for supporting Open Data in Miami,<br>please let others know.</h3>
       <!-- share social -->
@@ -229,6 +234,19 @@ $(function() {
       $('#petition-confirmation').show();
     });
   });
+});
+
+$.ajax({
+  url: 'http://petitionapi.heroku.com/api',
+  
+  success: function(data) {
+      $.each(data, function(i, obj) {
+       var line = "<li><img style="height:25px;width:25px" src='"+ obj.avatar + "' /> " + obj.firstname + " " + obj.lastname + " " + obj.zipcode +"</li>"
+       $('#signupList').append(line)
+
+   });
+  },
+  dataType: 'json'
 });
 </script>
 <script src="js/bootstrap.js"></script>
