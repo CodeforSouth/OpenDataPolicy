@@ -35,7 +35,7 @@
 
 //# sourceMappingURL=app.map
 $.ajax({
-  url: 'http://petitionapi.heroku.com/api',
+  url: 'http://antoniorllanos.github.io/OpenDataPolicy/test.json',
   
   success: function(data) {
       $.each(data, function(i, obj) {
