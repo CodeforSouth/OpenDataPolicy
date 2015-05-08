@@ -3,7 +3,7 @@ $.ajax({
   
   success: function(data) {
       $.each(data, function(i, obj) {
-       var line = "<li><img style="height:25px;width:25px" src='"+ obj.avatar + "' /> " + obj.firstname + " " + obj.lastname + " " + obj.zipcode +"</li>"
+       var line = "<li><img style='height:25px;width:25px' src='"+ obj.avatar + "' /> " + obj.firstname + " " + obj.lastname + " " + obj.zipcode +"</li>"
        $('#signupList').append(line)
 
    });
